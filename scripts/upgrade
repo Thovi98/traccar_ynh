@@ -31,7 +31,7 @@ then
 	ynh_script_progression --message="Upgrading source files..." --weight=1
 
 	# Download, check integrity, uncompress and patch the source from manifest.toml
-	ynh_setup_source --dest_dir="$install_dir" --keep="conf/traccar.xml"
+	ynh_setup_source --dest_dir="$install_dir" --full_replace=1 --keep="conf/traccar.xml"
 fi
 
 chown -R $app:www-data "$install_dir"
